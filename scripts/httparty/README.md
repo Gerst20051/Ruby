@@ -24,6 +24,14 @@ Specify Ruby Version `ruby "2.7.2"` In The `Gemfile`
 
 [$]> `ruby app.rb` or `./app.rb`
 
+[$]> `irb -r ./lib/ip_grabber`
+
+...> `ip = IPGrabber.new`
+
+...> `ip.get`
+
+...> `exit`
+
 # Testing
 
 Could use `RSpec` https://rspec.info
