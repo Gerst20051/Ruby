@@ -16,7 +16,13 @@ Specify Ruby Version `ruby "2.7.2"` In The `Gemfile`
 
 [$]> `bundle install`
 
+[$]> `touch app.rb`
+
 [$]> `mkdir lib spec`
+
+# Running Commands
+
+[$]> `ruby app.rb` or `./app.rb`
 
 # Testing
 
