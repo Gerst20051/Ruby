@@ -1,3 +1,5 @@
+require 'test/unit'
+
 $roman_numerals = {
   'I': 1,
   'IV': 4,
@@ -23,3 +25,11 @@ end
 puts '8 => ' + to_roman(8) # VIII
 puts '9 => ' + to_roman(9) # IX
 puts '2021 => ' + to_roman(2021) # MMXXI
+
+class RomanNumeralsTest < Test::Unit::TestCase
+  def test_to_roman
+    assert_equal to_roman(8), 'VIII'
+    assert_equal to_roman(9), 'IX'
+    assert_equal to_roman(2021), 'MMXXI'
+  end
+end
