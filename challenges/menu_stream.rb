@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# [$]> ./menu_stream.rb
+
 class MenuStream
   attr_reader :test_stream
 

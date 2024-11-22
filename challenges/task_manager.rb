@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+
+# [$]> ./task_manager.rb
+
 class Task
   def initialize(lambda = nil)
     # generate and assign a random task id

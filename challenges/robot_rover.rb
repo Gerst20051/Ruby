@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# [$]> ./robot_rover.rb
+
 TURN_LEFT_COMMAND = 'L'.freeze
 TURN_RIGHT_COMMAND = 'R'.freeze
 MOVE_FORWARD_COMMAND = 'M'.freeze

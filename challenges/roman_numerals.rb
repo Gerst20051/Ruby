@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+
+# [$]> ./roman_numerals.rb
+
 require 'test/unit'
 
 $roman_numerals = {

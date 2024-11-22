@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+
+# [$]> ./distribute_money.rb
+
 def distribute(amount, recipients)
   amount_paid = {}
   while amount > 0 and recipients.select { |k, v| v > 0 }.count > 0

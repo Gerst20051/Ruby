@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+
+# [$]> ./check_parentheses.rb
+
 def check_parentheses(input)
   stack = []
   mapping = {
