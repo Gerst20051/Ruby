@@ -132,6 +132,8 @@ grid_size = 40
 map = TerrainMap.new(grid_size)
 map.build_terrain
 map.start_fire(map.get_random_coordinate)
+map.start_fire(map.get_random_coordinate)
+map.start_fire(map.get_random_coordinate)
 puts map.build_grid
 
 class WildfireSimulationTest < Test::Unit::TestCase
