@@ -3,6 +3,7 @@
 # [$]> ./wildfire_simulation.rb
 
 require 'terminal-table'
+require 'test/unit'
 
 =begin
 The west coast has seen increasing number of wild fires lately. Imagine you are working on developing a wild fire
@@ -132,3 +133,22 @@ map = TerrainMap.new(grid_size)
 map.build_terrain
 map.start_fire(map.get_random_coordinate)
 puts map.build_grid
+
+class WildfireSimulationTest < Test::Unit::TestCase
+  def test_get_on_fire_blocks
+    map = TerrainMap.new(2)
+    map.set_terrain({
+      '0,0': TerrainHexagon.new(TerrainType::WATER),
+      '0,1': TerrainHexagon.new(TerrainType::VEGETATION),
+      '0,2': TerrainHexagon.new(TerrainType::WATER),
+      '1,0': TerrainHexagon.new(TerrainType::WATER),
+      '1,1': TerrainHexagon.new(TerrainType::VEGETATION),
+      '1,2': TerrainHexagon.new(TerrainType::VEGETATION),
+      '2,0': TerrainHexagon.new(TerrainType::ROCKS),
+      '2,1': TerrainHexagon.new(TerrainType::ROCKS),
+      '2,2': TerrainHexagon.new(TerrainType::ROCKS),
+    })
+    map.start_fire('1,1')
+    assert_equal map.get_on_fire_blocks.keys, [:'0,1', :'1,1', :'1,2']
+  end
+end
